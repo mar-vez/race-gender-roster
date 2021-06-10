@@ -21,7 +21,7 @@ async function isImbalance(input) {
   }
   console.log(stdout);
   
-  return stdout.toString('utf8') === "Yes";
+  return stdout.toString('utf8') === 'Yes';
 }
 
 const express = require('express');

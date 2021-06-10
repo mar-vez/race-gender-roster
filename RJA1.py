@@ -55,17 +55,12 @@ def find_imbalance(text):
 	loaded_clf = pickle.load(open(THIS_FOLDER+'/A1classifier.pickle', 'rb'))
 	X = clean_text(text)
 	predictions = loaded_clf.predict(X)
-	
-	if predictions == '1':
-		predictions = "Yes"
-	else:
-		predictions = "No"
 	return(predictions)
 
 def main():
 	my_text = str(sys.argv[1])
 	predictions = find_imbalance(my_text)
-	sys.stdout.write(str(predictions))
+	sys.stdout.write(str(predictions[0]))
 	
 
 if __name__ == "__main__":
