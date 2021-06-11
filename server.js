@@ -15,7 +15,7 @@ const exec = util.promisify(require('child_process').exec);
 
 async function isImbalance(input) {
 
-  const { stdout, stderr } = await exec(`py -3 ./RJA1.py '"${escapeStringRegexp(input)}"'`);
+  const { stdout, stderr } = await exec(`python3 ./RJA1.py '"${escapeStringRegexp(input)}"'`);
   if (stderr) {
     return stderr;
   }
